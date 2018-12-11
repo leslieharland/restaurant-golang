@@ -1,0 +1,20 @@
+{{define "restaurants"}}
+
+<div class="textwidget margin-top-30">
+  <p>No matter what you're craving, <em><strong>Restaurant to Room</strong></em> has you covered. Our fast and friendly delivery service brings you hot, fresh food, from a diverse choice of local restaurants.</p>
+</div>
+<div class="widget">
+  <strong ng-show="!vm.restaurants">Loading...</strong>
+  <ul>
+   {{range .}}
+    <li>
+      <a ng-href="#/menu/ {{.Name}}">{{.Name}}</a>
+    </li>
+       <br>
+    {{end}}
+   
+  </ul>
+</div>
+   
+{{end}}
+
